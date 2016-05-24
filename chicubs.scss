@@ -1,18 +1,78 @@
-$red:    #8e3b46;
-$blue:   #444b6e;
-$green:  #476650;
-$white:  #e8e8e8;
-$yellow: #ffe74c;
-$header-height: 150px;
+$main-red:    #8E3E3B;
+$light-red:   #984340;
+$main-blue:   #444b6e;
+$main-green:  #476650;
+$main-white:  #e8e8e8;
+$main-yellow: #ffe74c;
+$header-height: 219px;
+$tab-height: 39px;
 
 
 body {
     #header {
-        background-color: $green;
+        height: $header-height;
+        background-color: $main-white;
+        background-image:
+            linear-gradient(335deg, $main-red  23px, transparent 23px),
+            linear-gradient(155deg, $light-red 23px, transparent 23px),
+            linear-gradient(335deg, $main-red  23px, transparent 23px),
+            linear-gradient(155deg, $light-red 23px, transparent 23px);
+        background-size: 58px 58px;
+        background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+        border-bottom: 4px solid $main-white;
+        box-shadow: 0 1px 4px 0px rgba(0,0,0,0.25);
         #header-bottom-left {
             display: flex;
             align-items: flex-end;
-            height: $header-height;
+            margin-top: 161px;
+            height: $tab-height;
+            width: 100%;
+            background-color: $main-green;
+            #header-img-a {
+                position: absolute;
+                top: 58px;
+            }
+            .hover.pagename.redditname a {
+                position: absolute;
+                font-size: 0;
+                top: 48px;
+                left: 50%;
+                margin-left: -40px;
+                width: 80px;
+                height: 80px;
+                background-color: $main-white;
+                border: 14px solid $main-blue;
+                border-radius: 60px;
+
+            }
+            ul.tabmenu {
+                padding: 12px 0;
+                margin-left: -1em;
+                li {
+                    a {
+                        background-color: transparent;
+                        color: $main-white;
+                        border: none;
+                    }
+                    &.selected a {
+                        color: $main-yellow;
+                    }
+                }
+            }
+        }
+        #header-bottom-right {
+            #userbarToggle {
+                top: -2px;
+                border: none;
+                color: $main-white;
+                background-color: transparent;
+            }
+            background-color: transparent;
+            top: 188px;
+            right: 16px;
+            span, span.user, a {
+                color: $main-white!important;
+            }
         }
     }
 }
