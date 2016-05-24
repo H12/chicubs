@@ -3,3 +3,16 @@ $blue:   #444b6e;
 $green:  #476650;
 $white:  #e8e8e8;
 $yellow: #ffe74c;
+$header-height: 150px;
+
+
+body {
+    #header {
+        background-color: $green;
+        #header-bottom-left {
+            display: flex;
+            align-items: flex-end;
+            height: $header-height;
+        }
+    }
+}
