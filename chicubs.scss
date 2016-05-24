@@ -1,6 +1,6 @@
 $main-red:    #8E3E3B;
 $light-red:   #984340;
-$main-blue:   #444b6e;
+$main-blue:   #404b6e;
 $main-green:  #476650;
 $main-white:  #e8e8e8;
 $main-yellow: #ffe74c;
@@ -13,6 +13,7 @@ body {
         position: fixed;
         top: 0;
         height: $header-height;
+        width: 100%;
         background-color: $main-white;
         background-image:
             linear-gradient(335deg, $main-red  23px, transparent 23px),
@@ -77,8 +78,8 @@ body {
             }
             #mail {
                 margin: auto;
-                height: 10px;
-                width: 15px;
+                height: 8px;
+                width: 13px;
                 overflow: hidden;
                 position: relative;
                 background-color: $main-white;
@@ -90,9 +91,9 @@ body {
                     }
                 }
                 &.havemail {
-                    border: 1px solid #CCB209;
+                    border: 1px solid $main-yellow;
                     &:before, &:after {
-                        border: 1px solid #CCB209;
+                        border: 1px solid $main-yellow;
                     }
                 }
 
@@ -108,13 +109,13 @@ body {
                   }
 
                 &:before{
-                    top: 6px;
-                    left: -1px;
+                    top: 5px;
+                    left: -2px;
                 }
 
                 &:after{
-                    top: -12px;
-                    left: -1px;
+                    top: -13px;
+                    left: -2px;
                     background-color: $main-white;
                 }
             }
