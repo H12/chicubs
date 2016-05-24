@@ -19,7 +19,7 @@ body {
             linear-gradient(155deg, $light-red 23px, transparent 23px);
         background-size: 58px 58px;
         background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-        border-bottom: 4px solid $main-white;
+        border-bottom: none;
         box-shadow: 0 1px 4px 0px rgba(0,0,0,0.25);
         #header-bottom-left {
             display: flex;
@@ -37,7 +37,7 @@ body {
                 font-size: 0;
                 top: 48px;
                 left: 50%;
-                margin-left: -40px;
+                margin-left: -58px;
                 width: 80px;
                 height: 80px;
                 background-color: $main-white;
