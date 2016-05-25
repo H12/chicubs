@@ -9,27 +9,25 @@ $tab-height: 39px;
 
 
 body {
+    background-color: $main-white;
     #header {
-        position: fixed;
         top: 0;
-        height: $header-height;
-        width: 100%;
-        background-color: $main-white;
-        background-image:
-            linear-gradient(335deg, $main-red  23px, transparent 23px),
-            linear-gradient(155deg, $light-red 23px, transparent 23px),
-            linear-gradient(335deg, $main-red  23px, transparent 23px),
-            linear-gradient(155deg, $light-red 23px, transparent 23px);
-        background-size: 58px 58px;
-        background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+        width: calc(100% - 359px);
+        background-color: transparent;
+        padding: 31px 0 0 12px;
         border-bottom: none;
-        box-shadow: 0 1px 4px 0px rgba(0,0,0,0.25);
+        #sr-header-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+        }
         #header-bottom-left {
             display: flex;
             align-items: flex-end;
-            margin-top: 161px;
             height: $tab-height;
             width: 100%;
+            padding-top: 180px;
             background-color: $main-green;
             #header-img-a {
                 position: absolute;
@@ -65,8 +63,7 @@ body {
         }
         #header-bottom-right {
             background-color: transparent;
-            top: 188px;
-            right: 16px;
+            top: 30px;
             span, span.user, a {
                 color: $main-white!important;
             }
@@ -121,7 +118,13 @@ body {
             }
         }
     }
+    .side {
+        padding: 12px;
+        margin: -219px 12px 0 12px;
+    }
     .content {
-        margin-top: 227px;
+        padding: 12px;
+        background-color: white;
+        margin: 0 347px 0 11px;
     }
 }
