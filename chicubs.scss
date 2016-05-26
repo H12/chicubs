@@ -12,9 +12,9 @@ body {
     background-color: $main-blue;
     #header {
         top: 0;
-        width: calc(100% - 384px);
+        width: calc(100% - 400px);
         background-color: transparent;
-        padding: 31px 0 0 12px;
+        padding: 35px 0 0 16px;
         border-bottom: none;
         #sr-header-area {
             position: absolute;
@@ -27,8 +27,11 @@ body {
             align-items: flex-end;
             height: $tab-height;
             width: 100%;
-            padding: 180px 12px 0 12px;
+            padding: 180px 0 0 12px;
             background-color: $main-green;
+            box-shadow: 0 0 0 4px $main-green;
+            border: 3px solid $main-white;
+            border-radius: 8px;
             #header-img-a {
                 position: absolute;
                 top: 58px;
@@ -48,7 +51,7 @@ body {
             }
             ul.tabmenu {
                 padding: 12px 0;
-                margin-left: -1em;
+                margin: 0 1em 0 -1em;
                 width: 100%;
                 display: flex;
                 justify-content: space-around;
@@ -68,7 +71,7 @@ body {
         }
         #header-bottom-right {
             background-color: transparent;
-            top: 30px;
+            top: 40px;
             span, span.user, a {
                 color: $main-white!important;
             }
@@ -125,8 +128,13 @@ body {
     }
     .side {
         padding: 12px;
-        margin: -219px 12px 0 12px;
+        margin: -225px 16px 0 0;
         background-color: $main-green;
+        background-color: $main-green;
+        box-shadow: 0 0 0 4px $main-green;
+        border: 3px solid $main-white;
+        border-radius: 8px;
+
         .spacer {
             .titlebox {
                 .subButtons {
@@ -154,6 +162,7 @@ body {
     .content {
         padding: 12px;
         background-color: white;
-        margin: 0 348px 0 12px;
+        margin: 16px 362px 0 12px;
+        border-radius: 8px;
     }
 }
