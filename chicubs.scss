@@ -126,6 +126,30 @@ body {
     .side {
         padding: 12px;
         margin: -219px 12px 0 12px;
+        background-color: $main-green;
+        .spacer {
+            .titlebox {
+                .subButtons {
+                    .fancy-toggle-button.subscribe-button a {
+                        &.add {
+                            background-image: none;
+                            background-color: $main-blue;
+                        }
+                        &.remove {
+                            background-image: none;
+                            background-color: $main-red;
+                        }
+                    }
+                    .res-fancy-toggle-button {
+                        background-image: none;
+                        background-color: $main-blue;
+                        &.remove {
+                            background-color: $main-red;
+                        }
+                    }
+                }
+            }
+        }
     }
     .content {
         padding: 12px;
