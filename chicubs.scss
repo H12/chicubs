@@ -33,15 +33,16 @@ body {
             border: 3px solid $main-white;
             border-radius: 8px;
             #header-img-a {
+                display: none;
                 position: absolute;
                 top: 58px;
             }
             .hover.pagename.redditname a {
                 position: absolute;
                 font-size: 0;
-                top: 48px;
+                top: 70px;
                 left: 50%;
-                margin-left: -58px;
+                margin-left: -37px;
                 width: 80px;
                 height: 80px;
                 background-color: $main-white;
@@ -70,6 +71,7 @@ body {
             }
         }
         #header-bottom-right {
+            display: none;
             background-color: transparent;
             top: 40px;
             span, span.user, a {
@@ -178,6 +180,16 @@ body {
                                 th {
                                     font-weight: bold;
                                     text-transform: uppercase;
+                                }
+                                &:nth-of-type(3), &:nth-of-type(5) {
+                                    width: 24%!important;
+                                    position: absolute;
+                                    top: 39px;
+                                    right: 382px;
+                                    z-index: 117;
+                                }
+                                &:nth-of-type(5) {
+                                    left: 31px;
                                 }
                             }
                         }
