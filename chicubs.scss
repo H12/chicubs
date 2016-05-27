@@ -156,6 +156,33 @@ body {
                         }
                     }
                 }
+                .usertext {
+                    .usertext-body {
+                        .md
+                            table {
+                                width: 100%;
+                                th, td {
+                                    color: $main-white;
+                                    border: none;
+                                    border-bottom: 2px solid $main-white;
+                                    a {
+                                        color: $main-white;
+                                        &:hover {
+                                            color: $main-yellow;
+                                            -webkit-transition: color 0.2s;
+                                            -moz-transition: color 0.2s;
+                                            transition: color 0.2s;
+                                        }
+                                    }
+                                }
+                                th {
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
