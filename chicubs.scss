@@ -144,6 +144,29 @@ body {
         border-radius: 8px;
 
         .spacer {
+            #search {
+                #searchexpando {
+                    margin: 7px 2px 0 2px;
+                    background-color: $main-red;
+                    border: 2px solid $main-white;
+                    box-shadow: 0 0 0 3px $main-red;
+                    label, #search_showmore {
+                        color: $main-white;
+                        font-size: xx-small;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        select {
+                            margin-left: 4px;
+                        }
+                    }
+                    p {
+                        margin: 8px 0;
+                        #search_showmore {
+                            color: $main-yellow;
+                        }
+                    }
+                }
+            }
             .titlebox {
                 .subButtons {
                     .fancy-toggle-button.subscribe-button a {
