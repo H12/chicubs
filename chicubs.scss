@@ -167,6 +167,11 @@ body {
                     }
                 }
             }
+            .sidebox.submit {
+                .morelink, .nub {
+                    background-image: none;
+                }
+            }
             .titlebox {
                 .subButtons {
                     .fancy-toggle-button.subscribe-button a {
