@@ -14,6 +14,23 @@ $tab-height: 39px;
     transition: color 0.2s;
 }
 
+body {
+    .side {
+        .titlebox {
+            .hover.redditname {
+                a.hover {
+                    /*-- SET TO: (height/width)*100 --*/
+                    padding-top: 133%;
+                    background-image: url(%%sidebar-img%%);
+                    &:after {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 body {
     background-color: $main-blue;
@@ -200,6 +217,16 @@ body {
                 }
             }
             .titlebox {
+                .hover.redditname {
+                    a.hover {
+                        display: block;
+                        font-size: 0;
+                        height: 0;
+                        width: 100%;
+                        border-radius: 8px;
+                        background-size: cover;
+                    }
+                }
                 .subButtons {
                     .fancy-toggle-button.subscribe-button a {
                         &.add {
