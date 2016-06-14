@@ -311,7 +311,7 @@ body {
                 }
                 .usertext {
                     .usertext-body {
-                        .md
+                        .md {
                             table {
                                 width: 100%;
                                 th, td {
@@ -343,6 +343,12 @@ body {
                         }
                     }
                 }
+            }
+            &:nth-last-of-type(2) {
+                display: none;
+            }
+            .account-activity-box, .sidebox.create {
+                display: none;
             }
         }
     }
