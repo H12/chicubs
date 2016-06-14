@@ -167,6 +167,20 @@ body {
         border: 3px solid $main-white;
         border-radius: 8px;
 
+        .md {
+            h2 {
+                padding: 0;
+                margin: 8px 0;
+                text-align: center;
+                border: 2px inset rgba(107, 132, 114, 0.55);
+                color: $main-white;
+                font-size: 2em;
+                font-family: impact;
+                text-transform: uppercase;
+                line-height: 1.6em;
+            }
+        }
+
         .spacer {
             #search {
                 #searchexpando {
@@ -245,6 +259,37 @@ body {
                         }
                     }
                 }
+                * {
+                    background-color: transparent;
+                    color: $main-white;
+                    a {
+                        color: $main-white;
+                        &:hover {
+                            text-decoration: none;
+                            @include link-hover;
+                        }
+                    }
+                }
+                .subscribers {
+                    .number {
+                        &:after {
+                            content: " Cubs Fans"
+                        }
+                    }
+                    .word {
+                        display: none;
+                    }
+                }
+                .users-online {
+                    .number {
+                        &:after {
+                            content: " In Attendance"
+                        }
+                    }
+                    .word {
+                        display: none;
+                    }
+                }
                 .subButtons {
                     .fancy-toggle-button.subscribe-button a {
                         &.add {
@@ -256,7 +301,7 @@ body {
                             background-color: $main-red;
                         }
                     }
-                    .res-fancy-toggle-button {
+                    .res-fancy-toggle-button, .RESshortcut, .REStoggle {
                         background-image: none;
                         background-color: $main-blue;
                         &.remove {
