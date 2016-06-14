@@ -343,12 +343,40 @@ body {
                         }
                     }
                 }
+                .bottom {
+                    border-top: 2px solid $main-white;
+                }
             }
             &:nth-last-of-type(2) {
                 display: none;
             }
             .account-activity-box, .sidebox.create {
                 display: none;
+            }
+            .sidecontentbox {
+                .title h1 {
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: $main-white;
+                }
+                a {
+                    font-size: 12px;
+                    color: $main-white;
+                    background-color: transparent;
+                    &:hover {
+                        text-decoration: none;
+                        @include link-hover;
+                    }
+                }
+                .selected a {
+                    color: $main-yellow;
+                }
+                .content {
+                    margin-top: 12px;
+                    background-color: $main-red;
+                    border: 2px solid $main-white;
+                    box-shadow: 0 0 0 3px $main-red;
+                }
             }
         }
     }
