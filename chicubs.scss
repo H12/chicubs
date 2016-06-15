@@ -38,6 +38,7 @@ body {
     background-color: $main-blue;
     #header {
         top: 0;
+        position: static;
         width: calc(100% - 400px);
         background-color: transparent;
         padding: 35px 0 0 16px;
@@ -46,7 +47,7 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
+            right: 0;
         }
         #header-bottom-left {
             display: flex;
@@ -67,8 +68,7 @@ body {
                 position: absolute;
                 font-size: 0;
                 top: 70px;
-                left: 50%;
-                margin-left: -37px;
+                left: calc(50% - 228px);
                 width: 80px;
                 height: 80px;
                 background-color: $main-white;
