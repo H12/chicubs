@@ -158,6 +158,29 @@ body {
             }
         }
     }
+    .content {
+        #siteTable {
+            .link {
+                display: flex;
+                align-items: center;
+
+                height: 80px;
+                margin-bottom: 0;
+                border-bottom: 1px solid $main-white;
+                .rank {
+                    margin-top: 0;
+                    flex: 1;
+                }
+                .likes {
+                    flex: 1;
+                }
+                .entry {
+                    flex: 52;
+                }
+
+            }
+        }
+    }
     .side {
         padding: 12px;
         margin: -225px 16px 0 0;
