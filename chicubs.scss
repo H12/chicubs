@@ -1,8 +1,8 @@
-$main-red:    #8E3E3B;
-$light-red:   #984340;
-$main-blue:   #344b6e;
-$main-green:  #476650;
-$main-white:  #e8e8e8;
+$main-red: #8E3E3B;
+$light-red: #984340;
+$main-blue: #344b6e;
+$main-green: #476650;
+$main-white: #e8e8e8;
 $main-yellow: #ffe74c;
 $header-height: 219px;
 $tab-height: 39px;
@@ -23,6 +23,7 @@ body {
                     /*-- SET TO: (height/width)*100 --*/
                     padding-top: 133%;
                     background-image: url(%%sidebar-img%%);
+
                     &:after {
                         /*-- SET TO: Whatever caption is funniest--*/
                         content: "Soler watches the home runs fly";
@@ -33,9 +34,9 @@ body {
     }
 }
 
-
 body {
     background-color: $main-blue;
+
     #header {
         top: 0;
         position: static;
@@ -43,12 +44,14 @@ body {
         background-color: transparent;
         padding: 35px 0 0 16px;
         border-bottom: none;
+
         #sr-header-area {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
         }
+
         #header-bottom-left {
             display: flex;
             align-items: flex-end;
@@ -59,11 +62,13 @@ body {
             box-shadow: 0 0 0 4px $main-green;
             border: 3px solid $main-white;
             border-radius: 8px;
+
             #header-img-a {
                 display: none;
                 position: absolute;
                 top: 58px;
             }
+
             .hover.pagename.redditname a {
                 position: absolute;
                 font-size: 0;
@@ -74,8 +79,8 @@ body {
                 background-color: $main-white;
                 border: 14px solid $main-blue;
                 border-radius: 60px;
-
             }
+
             ul.tabmenu {
                 padding: 12px 0;
                 margin-left: -6px;
@@ -84,35 +89,43 @@ body {
                 display: flex;
                 justify-content: space-around;
                 border-top: 2px solid $main-white;
+
                 li {
                     text-transform: uppercase;
+
                     a {
                         background-color: transparent;
                         color: $main-white;
                         border: none;
+
                         &:hover {
                             @include link-hover;
                         }
                     }
+
                     &.selected a {
                         color: $main-yellow;
                     }
                 }
             }
         }
+
         #header-bottom-right {
             display: none;
             background-color: transparent;
             top: 40px;
+
             span, span.user, a {
-                color: $main-white!important;
+                color: $main-white !important;
             }
+
             #userbarToggle {
                 top: -2px;
                 border: none;
                 color: $main-white;
                 background-color: transparent;
             }
+
             #mail {
                 margin: auto;
                 height: 8px;
@@ -121,14 +134,18 @@ body {
                 position: relative;
                 background-color: $main-white;
                 background-image: none;
+
                 &.nohavemail {
                     border: 1px solid gray;
+
                     &:before, &:after {
                         border: 1px solid gray;
                     }
                 }
+
                 &.havemail {
                     border: 1px solid $main-yellow;
+
                     &:before, &:after {
                         border: 1px solid $main-yellow;
                     }
@@ -143,14 +160,14 @@ body {
                     -webkit-transform: rotate(45deg);
                     -moz-transform: rotate(45deg);
                     -ms-transform: rotate(45deg);
-                  }
+                }
 
-                &:before{
+                &:before {
                     top: 5px;
                     left: -2px;
                 }
 
-                &:after{
+                &:after {
                     top: -13px;
                     left: -2px;
                     background-color: $main-white;
@@ -158,29 +175,32 @@ body {
             }
         }
     }
+
     .content {
         #siteTable {
             .link {
                 display: flex;
                 align-items: center;
-
                 height: 80px;
                 margin-bottom: 0;
                 border-bottom: 1px solid $main-white;
+
                 .rank {
                     margin-top: 0;
                     flex: 1;
                 }
+
                 .likes {
                     flex: 1;
                 }
+
                 .entry {
                     flex: 52;
                 }
-
             }
         }
     }
+
     .side {
         padding: 12px;
         margin: -225px 16px 0 0;
@@ -211,50 +231,62 @@ body {
                     background-color: $main-red;
                     border: 2px solid $main-white;
                     box-shadow: 0 0 0 3px $main-red;
+
                     label, #search_showmore {
                         color: $main-white;
                         font-size: xx-small;
                         font-weight: 700;
                         text-transform: uppercase;
+
                         select {
                             margin-left: 4px;
                         }
                     }
+
                     p {
                         margin: 8px 0;
+
                         #search_showmore {
                             color: $main-yellow;
                         }
                     }
                 }
             }
+
             .sidebox.submit {
                 margin: 0 2px;
+
                 .morelink, .nub {
                     background-image: none;
                 }
+
                 .morelink {
                     background-color: $main-red;
                     border: 2px solid $main-white;
                     box-shadow: 0 0 0 3px $main-red;
                     border-radius: 4px;
                     font-size: 125%;
+
                     &:hover {
                         border-color: $main-white;
                     }
+
                     a {
                         color: $main-white;
                         text-transform: uppercase;
                         letter-spacing: 0px;
+
                         &:hover {
                             @include link-hover;
                         }
                     }
                 }
+
                 .nub {
                     width: 0;
                 }
             }
+
             .titlebox {
                 .hover.redditname {
                     a.hover {
@@ -264,8 +296,9 @@ body {
                         width: 100%;
                         border-radius: 8px;
                         background-size: cover;
+
                         &:after {
-                            background-color: rgba(0,0,0,0.5);
+                            background-color: rgba(0, 0, 0, 0.5);
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -282,83 +315,102 @@ body {
                         }
                     }
                 }
+
                 * {
                     background-color: transparent;
                     color: $main-white;
+
                     a {
                         color: $main-white;
+
                         &:hover {
                             text-decoration: none;
+
                             @include link-hover;
                         }
                     }
                 }
+
                 .subscribers {
                     .number {
                         &:after {
-                            content: " Cubs Fans"
+                            content: " Cubs Fans";
                         }
                     }
+
                     .word {
                         display: none;
                     }
                 }
+
                 .users-online {
                     .number {
                         &:after {
-                            content: " In Attendance"
+                            content: " In Attendance";
                         }
                     }
+
                     .word {
                         display: none;
                     }
                 }
+
                 .subButtons {
                     .fancy-toggle-button.subscribe-button a {
                         &.add {
                             background-image: none;
                             background-color: $main-blue;
                         }
+
                         &.remove {
                             background-image: none;
                             background-color: $main-red;
                         }
                     }
+
                     .res-fancy-toggle-button, .RESshortcut, .REStoggle {
                         background-image: none;
                         background-color: $main-blue;
+
                         &.remove {
                             background-color: $main-red;
                         }
                     }
                 }
+
                 .usertext {
                     .usertext-body {
                         .md {
                             table {
                                 width: 100%;
+
                                 th, td {
                                     color: $main-white;
                                     border: none;
                                     border-bottom: 2px solid $main-white;
+
                                     a {
                                         color: $main-white;
+
                                         &:hover {
                                             @include link-hover;
                                         }
                                     }
                                 }
+
                                 th {
                                     font-weight: bold;
                                     text-transform: uppercase;
                                 }
+
                                 &:nth-of-type(3), &:nth-of-type(5) {
-                                    width: calc(33% - 125px)!important;
+                                    width: calc(33% - 125px) !important;
                                     position: absolute;
                                     top: 39px;
                                     right: 382px;
                                     z-index: 117;
                                 }
+
                                 &:nth-of-type(5) {
                                     left: 31px;
                                 }
@@ -366,34 +418,43 @@ body {
                         }
                     }
                 }
+
                 .bottom {
                     border-top: 2px solid $main-white;
                 }
             }
+
             &:nth-last-of-type(2) {
                 display: none;
             }
+
             .account-activity-box, .sidebox.create {
                 display: none;
             }
+
             .sidecontentbox {
                 .title h1 {
                     font-size: 12px;
                     font-weight: bold;
                     color: $main-white;
                 }
+
                 a {
                     font-size: 12px;
                     color: $main-white;
                     background-color: transparent;
+
                     &:hover {
                         text-decoration: none;
+
                         @include link-hover;
                     }
                 }
+
                 .selected a {
                     color: $main-yellow;
                 }
+
                 .content {
                     margin-top: 12px;
                     background-color: $main-red;
@@ -403,6 +464,7 @@ body {
             }
         }
     }
+
     .content {
         padding: 12px;
         background-color: white;
