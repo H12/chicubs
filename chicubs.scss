@@ -90,6 +90,13 @@ body {
                 justify-content: space-around;
                 border-top: 2px solid $main-white;
 
+                @media screen and (max-width: 1120px) {
+                    white-space: normal;
+                    li {
+                        font-size: 1vw;
+                    }
+                }
+
                 li {
                     text-transform: uppercase;
 
@@ -181,17 +188,15 @@ body {
             .link {
                 display: flex;
                 align-items: center;
-                height: 80px;
+                min-height: 80px;
                 margin-bottom: 0;
                 border-bottom: 1px solid $main-white;
 
                 .rank {
-                    margin-top: 0;
-                    flex: 1;
+                    display: none;
                 }
 
                 .likes {
-                    flex: 1;
                 }
 
                 .entry {
@@ -402,17 +407,18 @@ body {
                                     font-weight: bold;
                                     text-transform: uppercase;
                                 }
+                                @media screen and (min-width: 1120px) {
+                                    &:nth-of-type(3), &:nth-of-type(5) {
+                                        width: calc(33% - 125px) !important;
+                                        position: absolute;
+                                        top: 39px;
+                                        right: 382px;
+                                        z-index: 117;
+                                    }
 
-                                &:nth-of-type(3), &:nth-of-type(5) {
-                                    width: calc(33% - 125px) !important;
-                                    position: absolute;
-                                    top: 39px;
-                                    right: 382px;
-                                    z-index: 117;
-                                }
-
-                                &:nth-of-type(5) {
-                                    left: 31px;
+                                    &:nth-of-type(5) {
+                                        left: 31px;
+                                    }
                                 }
                             }
                         }
