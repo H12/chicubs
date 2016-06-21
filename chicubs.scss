@@ -1,14 +1,14 @@
-$main-red: #8E3E3B;
+$bg-red: #8E3E3B;
 $light-red: #984340;
-$main-blue: #344b6e;
-$main-green: #476650;
-$main-white: #e8e8e8;
-$main-yellow: #ffe74c;
+$bg-blue: #344b6e;
+$bg-green: #476650;
+$fg-white: #e8e8e8;
+$fg-yellow: #ffe74c;
 $header-height: 219px;
 $tab-height: 39px;
 
 @mixin link-hover {
-    color: $main-yellow;
+    color: $fg-yellow;
     -webkit-transition: color 0.2s;
     -moz-transition: color 0.2s;
     transition: color 0.2s;
@@ -35,7 +35,7 @@ body {
 }
 
 body {
-    background-color: $main-blue;
+    background-color: $bg-blue;
 
     #header {
         top: 0;
@@ -58,9 +58,9 @@ body {
             height: $tab-height;
             width: 100%;
             padding: 180px 6px 0 6px;
-            background-color: $main-green;
-            box-shadow: 0 0 0 4px $main-green;
-            border: 3px solid $main-white;
+            background-color: $bg-green;
+            box-shadow: 0 0 0 4px $bg-green;
+            border: 3px solid $fg-white;
             border-radius: 8px;
 
             #header-img-a {
@@ -76,8 +76,8 @@ body {
                 left: calc(50% - 228px);
                 width: 80px;
                 height: 80px;
-                background-color: $main-white;
-                border: 14px solid $main-blue;
+                background-color: $fg-white;
+                border: 14px solid $bg-blue;
                 border-radius: 60px;
             }
 
@@ -88,7 +88,7 @@ body {
                 width: 100%;
                 display: flex;
                 justify-content: space-around;
-                border-top: 2px solid $main-white;
+                border-top: 2px solid $fg-white;
 
                 @media screen and (max-width: 1120px) {
                     white-space: normal;
@@ -102,7 +102,7 @@ body {
 
                     a {
                         background-color: transparent;
-                        color: $main-white;
+                        color: $fg-white;
                         border: none;
 
                         &:hover {
@@ -111,7 +111,7 @@ body {
                     }
 
                     &.selected a {
-                        color: $main-yellow;
+                        color: $fg-yellow;
                     }
                 }
             }
@@ -123,13 +123,13 @@ body {
             top: 40px;
 
             span, span.user, a {
-                color: $main-white !important;
+                color: $fg-white !important;
             }
 
             #userbarToggle {
                 top: -2px;
                 border: none;
-                color: $main-white;
+                color: $fg-white;
                 background-color: transparent;
             }
 
@@ -139,7 +139,7 @@ body {
                 width: 13px;
                 overflow: hidden;
                 position: relative;
-                background-color: $main-white;
+                background-color: $fg-white;
                 background-image: none;
 
                 &.nohavemail {
@@ -151,10 +151,10 @@ body {
                 }
 
                 &.havemail {
-                    border: 1px solid $main-yellow;
+                    border: 1px solid $fg-yellow;
 
                     &:before, &:after {
-                        border: 1px solid $main-yellow;
+                        border: 1px solid $fg-yellow;
                     }
                 }
 
@@ -177,7 +177,7 @@ body {
                 &:after {
                     top: -13px;
                     left: -2px;
-                    background-color: $main-white;
+                    background-color: $fg-white;
                 }
             }
         }
@@ -190,7 +190,7 @@ body {
                 align-items: center;
                 min-height: 80px;
                 margin-bottom: 0;
-                border-bottom: 1px solid $main-white;
+                border-bottom: 1px solid $fg-white;
 
                 .rank {
                     display: none;
@@ -209,10 +209,10 @@ body {
     .side {
         padding: 12px;
         margin: -225px 16px 0 0;
-        background-color: $main-green;
-        background-color: $main-green;
-        box-shadow: 0 0 0 4px $main-green;
-        border: 3px solid $main-white;
+        background-color: $bg-green;
+        background-color: $bg-green;
+        box-shadow: 0 0 0 4px $bg-green;
+        border: 3px solid $fg-white;
         border-radius: 8px;
 
         .md {
@@ -221,7 +221,7 @@ body {
                 margin: 8px 0;
                 text-align: center;
                 border: 2px inset rgba(107, 132, 114, 0.55);
-                color: $main-white;
+                color: $fg-white;
                 font-size: 2em;
                 font-family: impact;
                 text-transform: uppercase;
@@ -233,12 +233,12 @@ body {
             #search {
                 #searchexpando {
                     margin: 7px 2px 0 2px;
-                    background-color: $main-red;
-                    border: 2px solid $main-white;
-                    box-shadow: 0 0 0 3px $main-red;
+                    background-color: $bg-red;
+                    border: 2px solid $fg-white;
+                    box-shadow: 0 0 0 3px $bg-red;
 
                     label, #search_showmore {
-                        color: $main-white;
+                        color: $fg-white;
                         font-size: xx-small;
                         font-weight: 700;
                         text-transform: uppercase;
@@ -252,7 +252,7 @@ body {
                         margin: 8px 0;
 
                         #search_showmore {
-                            color: $main-yellow;
+                            color: $fg-yellow;
                         }
                     }
                 }
@@ -266,18 +266,18 @@ body {
                 }
 
                 .morelink {
-                    background-color: $main-red;
-                    border: 2px solid $main-white;
-                    box-shadow: 0 0 0 3px $main-red;
+                    background-color: $bg-red;
+                    border: 2px solid $fg-white;
+                    box-shadow: 0 0 0 3px $bg-red;
                     border-radius: 4px;
                     font-size: 125%;
 
                     &:hover {
-                        border-color: $main-white;
+                        border-color: $fg-white;
                     }
 
                     a {
-                        color: $main-white;
+                        color: $fg-white;
                         text-transform: uppercase;
                         letter-spacing: 0px;
 
@@ -323,10 +323,10 @@ body {
 
                 * {
                     background-color: transparent;
-                    color: $main-white;
+                    color: $fg-white;
 
                     a {
-                        color: $main-white;
+                        color: $fg-white;
 
                         &:hover {
                             text-decoration: none;
@@ -364,21 +364,21 @@ body {
                     .fancy-toggle-button.subscribe-button a {
                         &.add {
                             background-image: none;
-                            background-color: $main-blue;
+                            background-color: $bg-blue;
                         }
 
                         &.remove {
                             background-image: none;
-                            background-color: $main-red;
+                            background-color: $bg-red;
                         }
                     }
 
                     .res-fancy-toggle-button, .RESshortcut, .REStoggle {
                         background-image: none;
-                        background-color: $main-blue;
+                        background-color: $bg-blue;
 
                         &.remove {
-                            background-color: $main-red;
+                            background-color: $bg-red;
                         }
                     }
                 }
@@ -390,12 +390,12 @@ body {
                                 width: 100%;
 
                                 th, td {
-                                    color: $main-white;
+                                    color: $fg-white;
                                     border: none;
-                                    border-bottom: 2px solid $main-white;
+                                    border-bottom: 2px solid $fg-white;
 
                                     a {
-                                        color: $main-white;
+                                        color: $fg-white;
 
                                         &:hover {
                                             @include link-hover;
@@ -426,7 +426,7 @@ body {
                 }
 
                 .bottom {
-                    border-top: 2px solid $main-white;
+                    border-top: 2px solid $fg-white;
                 }
             }
 
@@ -442,12 +442,12 @@ body {
                 .title h1 {
                     font-size: 12px;
                     font-weight: bold;
-                    color: $main-white;
+                    color: $fg-white;
                 }
 
                 a {
                     font-size: 12px;
-                    color: $main-white;
+                    color: $fg-white;
                     background-color: transparent;
 
                     &:hover {
@@ -458,14 +458,14 @@ body {
                 }
 
                 .selected a {
-                    color: $main-yellow;
+                    color: $fg-yellow;
                 }
 
                 .content {
                     margin-top: 12px;
-                    background-color: $main-red;
-                    border: 2px solid $main-white;
-                    box-shadow: 0 0 0 3px $main-red;
+                    background-color: $bg-red;
+                    border: 2px solid $fg-white;
+                    box-shadow: 0 0 0 3px $bg-red;
                 }
             }
         }
