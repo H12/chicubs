@@ -1,3 +1,5 @@
+$win: #2c518a;
+$loss: #33568c;
 $bg-red: #8E3E3B;
 $light-red: #984340;
 $bg-blue: #344b6e;
@@ -183,6 +185,49 @@ body {
         }
     }
 
+    .arrow {
+        width: 24px;
+        height: 16px;
+        margin-bottom: 2px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.5);
+        font-family: arial;
+        font-weight: bold;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .likes, .dislikes {
+            color: $win;
+        }
+        &.up {
+            background: white;
+            color: #c6c6c6;
+            &:before {
+                content: "W";
+            }
+        }
+        &.upmod {
+            background: white;
+            color: $win;
+            &:before {
+                content: "W";
+            }
+        }
+        &.down{
+            background: #dcdcdc;
+            color: white;
+            &:before {
+                content: "L"
+            }
+        }
+        &.downmod {
+            background: $loss;
+            color: white;
+            &:before {
+                content: "L"
+            }
+        }
+    }
     .content {
         #siteTable {
             .link {
@@ -196,11 +241,26 @@ body {
                     display: none;
                 }
 
-                .likes {
+                .unvoted, .likes, .dislikes {
+                    width: 26px;
+                    .likes, .dislikes {
+                        color: $win;
+                    }
                 }
 
                 .entry {
                     flex: 52;
+                }
+            }
+        }
+        .comment {
+            .midcol.unvoted, .midcol.likes, .midcol.dislikes {
+                width: 26px;
+                .likes, .dislikes {
+                    color: $win;
+                }
+                .arrow {
+                    margin-bottom: 5px;
                 }
             }
         }
@@ -476,5 +536,14 @@ body {
         background-color: white;
         margin: 16px 362px 0 12px;
         border-radius: 8px;
+    }
+    &.comments-page {
+        .content {
+            #siteTable {
+                .link {
+                    align-items: flex-start;
+                }
+            }
+        }
     }
 }
