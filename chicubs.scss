@@ -38,6 +38,7 @@ body {
 
 body {
     background-color: $bg-blue;
+    min-width: 1120px;
 
     #header {
         top: 0;
@@ -81,6 +82,9 @@ body {
                 background-color: $fg-white;
                 border: 14px solid $bg-blue;
                 border-radius: 60px;
+                @media screen and (max-width: 1119px) {
+                    left: 333px;
+                }
             }
 
             ul.tabmenu {
@@ -91,13 +95,6 @@ body {
                 display: flex;
                 justify-content: space-around;
                 border-top: 2px solid $fg-white;
-
-                @media screen and (max-width: 1119px) {
-                    white-space: normal;
-                    li {
-                        font-size: 1vw;
-                    }
-                }
 
                 li {
                     text-transform: uppercase;
@@ -449,20 +446,22 @@ body {
                                 display: none;
                             }
                             h2 {
-                                @media screen and (min-width: 1120px) {
-                                    &:nth-of-type(3), &:nth-of-type(4) {
-                                        width: calc(33% - 126px) !important;
-                                        position: absolute;
-                                        top: 42px;
-                                        right: 380px;
-                                        z-index: 117;
-                                    }
-
-                                    &:nth-of-type(4) {
-                                        left: 29px;
+                                &:nth-of-type(3), &:nth-of-type(4) {
+                                    width: calc(33% - 126px) !important;
+                                    position: absolute;
+                                    top: 42px;
+                                    right: 380px;
+                                    z-index: 117;
+                                    @media screen and (max-width: 1120px) {
+                                        left: 493px;
+                                        width: 247px !important;
                                     }
                                 }
-                            }
+
+                                &:nth-of-type(4) {
+                                    left: 29px;
+                                }
+                                                            }
                             table {
                                 width: 100%;
                                 margin-bottom: 16px;
@@ -485,20 +484,22 @@ body {
                                     font-weight: bold;
                                     text-transform: uppercase;
                                 }
-                                @media screen and (min-width: 1120px) {
-                                    &:nth-of-type(3), &:nth-of-type(5) {
-                                        width: calc(33% - 125px) !important;
-                                        position: absolute;
-                                        margin-bottom: 0;
-                                        top: 92px;
-                                        right: 382px;
-                                        z-index: 117;
+                                &:nth-of-type(3), &:nth-of-type(5) {
+                                    width: calc(33% - 125px) !important;
+                                    position: absolute;
+                                    margin-bottom: 0;
+                                    top: 92px;
+                                    right: 382px;
+                                    z-index: 117;
+                                    @media screen and (max-width: 1120px) {
+                                        left: 492px;
+                                        width: 248px !important;
                                     }
+                                }
 
-                                    &:nth-of-type(5) {
-                                        left: 31px;
-                                        font-size: 13px;
-                                    }
+                                &:nth-of-type(5) {
+                                    left: 31px;
+                                    font-size: 13px;
                                 }
                                 &:nth-of-type(3) {
                                     td {
