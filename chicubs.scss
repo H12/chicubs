@@ -23,12 +23,12 @@ body {
             .hover.redditname {
                 a.hover {
                     /*-- SET TO: (height/width)*100 --*/
-                    padding-top: 133%;
-                    background-image: url(%%sidebar-img%%);
+                    padding-top: 95%;
+                    background-image: url(%%madd-scientist%%);
 
                     &:after {
                         /*-- SET TO: Whatever caption is funniest--*/
-                        content: "Soler watches the home runs fly";
+                        content: "Yes... Now YOU go to left field!";
                     }
                 }
             }
@@ -59,7 +59,7 @@ body {
             align-items: flex-end;
             height: $tab-height;
             width: 100%;
-            padding: 180px 6px 0 6px;
+            padding: 233px 6px 0 6px;
             background-color: $bg-green;
             box-shadow: 0 0 0 4px $bg-green;
             border: 3px solid $fg-white;
@@ -268,7 +268,7 @@ body {
 
     .side {
         padding: 12px;
-        margin: -225px 16px 0 0;
+        margin: -278px 16px 0 0;
         background-color: $bg-green;
         background-color: $bg-green;
         box-shadow: 0 0 0 4px $bg-green;
@@ -372,7 +372,6 @@ body {
                             margin-top: -40px;
                             font-size: 11px;
                             font-weight: 700;
-                            text-transform: uppercase;
                             text-align: center;
                             color: #e8e8e8;
                             z-index: 3000;
@@ -446,8 +445,27 @@ body {
                 .usertext {
                     .usertext-body {
                         .md {
+                            h3:nth-of-type(-n+4), p:nth-of-type(4), table:nth-of-type(4) {
+                                display: none;
+                            }
+                            h2 {
+                                @media screen and (min-width: 1120px) {
+                                    &:nth-of-type(3), &:nth-of-type(4) {
+                                        width: calc(33% - 126px) !important;
+                                        position: absolute;
+                                        top: 42px;
+                                        right: 380px;
+                                        z-index: 117;
+                                    }
+
+                                    &:nth-of-type(4) {
+                                        left: 29px;
+                                    }
+                                }
+                            }
                             table {
                                 width: 100%;
+                                margin-bottom: 16px;
 
                                 th, td {
                                     color: $fg-white;
@@ -471,7 +489,8 @@ body {
                                     &:nth-of-type(3), &:nth-of-type(5) {
                                         width: calc(33% - 125px) !important;
                                         position: absolute;
-                                        top: 39px;
+                                        margin-bottom: 0;
+                                        top: 92px;
                                         right: 382px;
                                         z-index: 117;
                                     }
