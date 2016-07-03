@@ -499,7 +499,9 @@ body {
 
                                 &:nth-of-type(5) {
                                     left: 31px;
-                                    font-size: 13px;
+                                    tbody {
+                                        font-size: 13px;
+                                    }
                                 }
                                 &:nth-of-type(3) {
                                     td {
