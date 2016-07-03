@@ -8,6 +8,7 @@ $fg-white: #e8e8e8;
 $fg-yellow: #ffe74c;
 $header-height: 219px;
 $tab-height: 39px;
+$min-width: 1140px;
 
 @mixin link-hover {
     color: $fg-yellow;
@@ -38,7 +39,7 @@ body {
 
 body {
     background-color: $bg-blue;
-    min-width: 1120px;
+    min-width: $min-width;
 
     #header {
         top: 0;
@@ -82,8 +83,8 @@ body {
                 background-color: $fg-white;
                 border: 14px solid $bg-blue;
                 border-radius: 60px;
-                @media screen and (max-width: 1119px) {
-                    left: 333px;
+                @media screen and (max-width: $min-width) {
+                    left: calc((#{$min-width}/2) - 227px);
                 }
             }
 
@@ -452,9 +453,9 @@ body {
                                     top: 42px;
                                     right: 380px;
                                     z-index: 117;
-                                    @media screen and (max-width: 1120px) {
-                                        left: 493px;
-                                        width: 247px !important;
+                                    @media screen and (max-width: $min-width) {
+                                        left: calc(#{$min-width} - ((#{$min-width} * 0.33) - 126px) - 380px);
+                                        width: calc((#{$min-width} * 0.33) - 126px) !important;
                                     }
                                 }
 
@@ -491,9 +492,9 @@ body {
                                     top: 92px;
                                     right: 382px;
                                     z-index: 117;
-                                    @media screen and (max-width: 1120px) {
-                                        left: 492px;
-                                        width: 248px !important;
+                                    @media screen and (max-width: $min-width) {
+                                        left: calc(#{$min-width} - ((#{$min-width} * 0.33) - 126px) - 380px);
+                                        width: calc((#{$min-width} * 0.33) - 125px) !important;
                                     }
                                 }
 
