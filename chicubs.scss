@@ -252,6 +252,26 @@ body {
                 .entry {
                     flex: 52;
                 }
+                &.self[data-url*="game_thread"] {
+                    table {
+                        width: 100%;
+                        margin-bottom: 16px;
+
+                        th, td {
+                            color: $bg-blue;
+                            border: none;
+                            border-bottom: 2px solid $bg-blue;
+
+                            a {
+                                color: $bg-blue;
+
+                                &:hover {
+                                    @include link-hover;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .comment {
@@ -482,7 +502,7 @@ body {
                                 &:nth-of-type(4) {
                                     left: 29px;
                                 }
-                                                            }
+                            }
                             table {
                                 width: 100%;
                                 margin-bottom: 16px;
