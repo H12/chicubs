@@ -301,7 +301,10 @@ body {
                 padding: 0;
                 margin: 8px 0;
                 text-align: center;
-                border: 2px inset rgba(107, 132, 114, 0.55);
+                border-top: 2px solid #35483b;
+                border-left: 2px solid #35483b;
+                border-right: 2px solid #5b7663;
+                border-bottom: 2px solid #5b7663;
                 color: $fg-white;
                 font-size: 2em;
                 font-family: impact;
