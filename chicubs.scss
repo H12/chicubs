@@ -462,26 +462,24 @@ body {
                     }
                 }
 
-                .subButtons {
-                    .fancy-toggle-button.subscribe-button a {
-                        &.add {
-                            background-image: none;
-                            background-color: $bg-blue;
-                        }
-
-                        &.remove {
-                            background-image: none;
-                            background-color: $bg-red;
-                        }
+                .fancy-toggle-button.subscribe-button a,  {
+                    &.add {
+                        background-image: none !important;
+                        background-color: $bg-blue !important;
                     }
 
-                    .res-fancy-toggle-button, .RESshortcut, .REStoggle {
-                        background-image: none;
-                        background-color: $bg-blue;
+                    &.remove {
+                        background-image: none !important;
+                        background-color: $bg-red !important;
+                    }
+                }
 
-                        &.remove {
-                            background-color: $bg-red;
-                        }
+                .res-fancy-toggle-button, .RESshortcut, .REStoggle {
+                    background-image: none;
+                    background-color: $bg-blue;
+
+                    &.remove {
+                        background-color: $bg-red;
                     }
                 }
 
