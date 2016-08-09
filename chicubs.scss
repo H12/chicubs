@@ -5,6 +5,10 @@ $fg-red: #984340;
 $bg-blue: #344b6e;
 $fg-blue: #29579e;
 $bg-green: #476650;
+<<<<<<< HEAD
+=======
+$fg-green: #427751;
+>>>>>>> master
 $fg-visited: #53299e;
 $bg-white: #ffffff;
 $fg-white: #e8e8e8;
@@ -44,10 +48,20 @@ body {
     background-color: $bg-blue;
     min-width: $min-width;
 
-    .thing .title {
-        color: $fg-blue;
-        &:visited {
-            color: $fg-visited;
+    .thing {
+        .title, .author {
+            color: $fg-blue;
+            &:visited {
+                color: $fg-visited;
+            }
+            &.moderator {
+                background-color: $fg-green!important;
+            }
+        }
+        &.stickied {
+            .title, .moderator, .stickied-tagline {
+                color: $fg-green!important;
+            }
         }
     }
 
