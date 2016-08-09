@@ -1,9 +1,12 @@
 $win: #2c518a;
 $loss: #33568c;
 $bg-red: #8E3E3B;
-$light-red: #984340;
+$fg-red: #984340;
 $bg-blue: #344b6e;
+$fg-blue: #29579e;
 $bg-green: #476650;
+$fg-visited: #53299e;
+$bg-white: #ffffff;
 $fg-white: #e8e8e8;
 $fg-yellow: #ffe74c;
 $header-height: 219px;
@@ -40,6 +43,13 @@ body {
 body {
     background-color: $bg-blue;
     min-width: $min-width;
+
+    .thing .title {
+        color: $fg-blue;
+        &:visited {
+            color: $fg-visited;
+        }
+    }
 
     #header {
         top: 0;
