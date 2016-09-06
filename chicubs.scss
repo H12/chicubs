@@ -112,7 +112,7 @@ body {
             width: 100%;
             padding: 240px 6px 0 6px;
             background-color: $bg-green;
-            box-shadow: 0 0 0 4px $bg-green;
+            box-shadow: 0 0 0 4px $bg-green, 0 0 8px 4px rgba(0,0,0,0.5);
             border: 3px solid $fg-white;
             border-radius: 8px;
 
@@ -278,13 +278,20 @@ body {
         }
     }
     .content {
+        margin: 16px 362px 0 12px;
         #siteTable {
             .link {
                 display: flex;
                 align-items: center;
+                background: linear-gradient($fg-white, $bg-white, $bg-white, $bg-white, $bg-white, $bg-white, $bg-white, $fg-white);
                 min-height: 80px;
-                margin-bottom: 0;
-                border-bottom: 1px solid $fg-white;
+                margin-bottom: 12px;
+                padding: 6px;
+                border-color: #d80000;
+                border-style: dashed;
+                border-width: 0 0 1px 1px;
+                border-radius: 8px 16px;
+                box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
 
                 .rank {
                     display: none;
@@ -340,7 +347,7 @@ body {
         margin: -285px 16px 0 0;
         background-color: $bg-green;
         background-color: $bg-green;
-        box-shadow: 0 0 0 4px $bg-green;
+        box-shadow: 0 0 0 4px $bg-green, 0 0 8px 4px rgba(0,0,0,0.5);
         border: 3px solid $fg-white;
         border-radius: 8px;
 
@@ -823,13 +830,6 @@ body {
                 }
             }
         }
-    }
-
-    .content {
-        padding: 12px;
-        background-color: white;
-        margin: 16px 362px 0 12px;
-        border-radius: 8px;
     }
     &.comments-page {
         .content {
