@@ -40,10 +40,35 @@ body {
         }
     }
 }
-
 body {
-    background-color: $bg-blue;
     min-width: $min-width;
+
+    // BACKGROUND ANIMATION STUFF
+    background: linear-gradient(180deg, #a3c6f6, #a3c6f6, #a3c6f6, #a3c6f6, #a3c6f6, #ffeba2, #cda0c0, #353756, #353756, #353756, #353756, #cda0c0, #ffeba2, #a3c6f6);
+    background-size: 100% 5000%;
+
+    -webkit-animation: AnimationName 10000s linear infinite;
+    -moz-animation: AnimationName 10000s linear infinite;
+    -o-animation: AnimationName 10000s linear infinite;
+    animation: AnimationName 10000s linear infinite;
+
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 0%}
+        100%{background-position:0% 5000%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 0%}
+        100%{background-position:0% 5000%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 0%}
+        100%{background-position:0% 5000%}
+    }
+    @keyframes AnimationName { 
+        0%{background-position:0% 0%}
+        100%{background-position:0% 5000%}
+    }
 
     .thing {
         .title, .author {
