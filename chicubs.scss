@@ -1,9 +1,13 @@
 $win: #2c518a;
 $loss: #33568c;
 $bg-red: #8E3E3B;
-$light-red: #984340;
+$fg-red: #984340;
 $bg-blue: #344b6e;
+$fg-blue: #29579e;
 $bg-green: #476650;
+$fg-green: #427751;
+$fg-visited: #53299e;
+$bg-white: #ffffff;
 $fg-white: #e8e8e8;
 $fg-yellow: #ffe74c;
 $header-height: 219px;
@@ -40,6 +44,23 @@ body {
 body {
     background-color: $bg-blue;
     min-width: $min-width;
+
+    .thing {
+        .title, .author {
+            color: $fg-blue;
+            &:visited {
+                color: $fg-visited;
+            }
+            &.moderator {
+                background-color: $fg-green!important;
+            }
+        }
+        &.stickied {
+            .title, .moderator, .stickied-tagline {
+                color: $fg-green!important;
+            }
+        }
+    }
 
     #header {
         top: 0;
@@ -539,136 +560,111 @@ body {
                                         left: calc(#{$min-width} - ((#{$min-width} * 0.33) - 126px) - 380px);
                                         width: calc((#{$min-width} * 0.33) - 125px) !important;
                                     }
-                                    a {
-                                        &[title*="Lost"]:after {
-                                            content: "";
-                                            top: 2px;
-                                            right: 11px;
-                                            position: absolute;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            height: 6px;
-                                            width: 6px;
-                                            border: 1px solid $fg-white;
-                                            background-color: $bg-blue;
-                                            border-radius: 6px;
-                                        }
-                                        &[title*="Won"]:after {
-                                            content: "";
-                                            top: 2px;
-                                            right: 11px;
-                                            position: absolute;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            height: 8px;
-                                            width: 8px;
-                                            background-color: $fg-white;
-                                            border-radius: 4px;
-                                        }
-                                        &:before {
-                                            content: "";
-                                            background-image: url(%%big-flair%%);
-                                            background-size: 18px;
-                                            border-radius: 4px;
-                                            display: block;
-                                            height: 16px;
-                                            width: 18px;
-                                            opacity: 0.9;
-                                        }
-                                        &[title*="Won"]:before, &[title*="Lost"]:before {
-                                            opacity: 0.3;
-                                        }
-                                        &[href="/r/AZDiamondbacks"]:before, &[href="/r/azdiamondbacks"]:before {
-                                            background-position: 0 0;
-                                        }
-                                        &[href="/r/Braves"]:before, &[href="/r/braves"]:before {
-                                            background-position: 0 -16px;
-                                        }
-                                        &[href="/r/Orioles"]:before, &[href="/r/orioles"]:before {
-                                            background-position: 0 -32px;
-                                        }
-                                        &[href="/r/RedSox"]:before, &[href="/r/redsox"]:before {
-                                            background-position: 0 -48px;
-                                        }
-                                        &[href="/r/CHICubs"]:before, &[href="/r/ChiCubs"]:before, &[href="/r/chicubs"]:before, &[href="/r/Cubs"]:before, &[href="/r/cubs"]:before {
-                                            background-position: 0 -64px;
-                                        }
-                                        &[href="/r/WhiteSox"]:before, &[href="/r/whitesox"]:before {
-                                            background-position: 0 -80px;
-                                        }
-                                        &[href="/r/Reds"]:before, &[href="/r/reds"]:before {
-                                            background-position: 0 -96px;
-                                        }
-                                        &[href="/r/WahoosTipi"]:before, &[href="/r/wahoostipi"]:before {
-                                            background-position: 0 -112px;
-                                        }
-                                        &[href="/r/ColoradoRockies"]:before, &[href="/r/coloradorockies"]:before {
-                                            background-position: 0 -128px;
-                                        }
-                                        &[href="/r/MotorCityKitties"]:before, &[href="/r/motorcitykitties"]:before {
-                                            background-position: 0 -144px;
-                                        }
-                                        &[href="/r/Astros"]:before, &[href="/r/astros"]:before {
-                                            background-position: 0 -160px;
-                                        }
-                                        &[href="/r/KCRoyals"]:before, &[href="/r/kcroyals"]:before {
-                                            background-position: 0 -176px;
-                                        }
-                                        &[href="/r/AngelsBaseball"]:before, &[href="/r/angelsbaseball"]:before {
-                                            background-position: 0 -192px;
-                                        }
-                                        &[href="/r/Dodgers"]:before, &[href="/r/dodgers"]:before {
-                                            background-position: 0 -208px;
-                                        }
-                                        &[href="/r/LetsGoFish"]:before, &[href="/r/letsgofish"]:before {
-                                            background-position: 0 -224px;
-                                        }
-                                        &[href="/r/Brewers"]:before, &[href="/r/brewers"]:before {
-                                            background-position: 0 -240px;
-                                        }
-                                        &[href="/r/MinnesotaTwins"]:before, &[href="/r/minnesotatwins"]:before {
-                                            background-position: 0 -256px;
-                                        }
-                                        &[href="/r/NewYorkMets"]:before, &[href="/r/newyorkmets"]:before {
-                                            background-position: 0 -272px;
-                                        }
-                                        &[href="/r/NYYankees"]:before, &[href="/r/nyyankees"]:before {
-                                            background-position: 0 -288px;
-                                        }
-                                        &[href="/r/OaklandAthletics"]:before, &[href="/r/oaklandathletics"]:before {
-                                            background-position: 0 -304px;
-                                        }
-                                        &[href="/r/Phillies"]:before, &[href="/r/phillies"]:before {
-                                            background-position: 0 -320px;
-                                        }
-                                        &[href="/r/Buccos"]:before, &[href="/r/buccos"]:before {
-                                            background-position: 0 -336px;
-                                        }
-                                        &[href="/r/Padres"]:before, &[href="/r/padres"]:before {
-                                            background-position: 0 -352px;
-                                        }
-                                        &[href="/r/SFGiants"]:before, &[href="/r/sfgiants"]:before {
-                                            background-position: 0 -368px;
-                                        }
-                                        &[href="/r/Mariners"]:before, &[href="/r/mariners"]:before {
-                                            background-position: 0 -384px;
-                                        }
-                                        &[href="/r/Cardinals"]:before, &[href="/r/cardinals"]:before {
-                                            background-position: 0 -400px;
-                                        }
-                                        &[href="/r/TampaBayRays"]:before, &[href="/r/tampabayrays"]:before {
-                                            background-position: 0 -416px;
-                                        }
-                                        &[href="/r/TexasRangers"]:before, &[href="/r/texasrangers"]:before {
-                                            background-position: 0 -432px;
-                                        }
-                                        &[href="/r/TorontoBlueJays"]:before, &[href="/r/torontobluejays"]:before {
-                                            background-position: 0 -448px;
-                                        }
-                                        &[href="/r/Nationals"]:before, &[href="/r/nationals"]:before {
-                                            background-position: 0 -464px;
+                                    td {
+                                        a {
+                                            &:before {
+                                                content: "";
+                                                background-image: url(%%big-flair%%);
+                                                background-size: 18px;
+                                                border-radius: 4px;
+                                                display: block;
+                                                height: 16px;
+                                                width: 18px;
+                                                opacity: 0.9;
+                                            }
+                                            &[title*="Won"]:before, &[title*="Lost"]:before {
+                                                opacity: 0.3;
+                                            }
+                                            &[href="/r/AZDiamondbacks"]:before, &[href="/r/azdiamondbacks"]:before {
+                                                background-position: 0 0;
+                                            }
+                                            &[href="/r/Braves"]:before, &[href="/r/braves"]:before {
+                                                background-position: 0 -16px;
+                                            }
+                                            &[href="/r/Orioles"]:before, &[href="/r/orioles"]:before {
+                                                background-position: 0 -32px;
+                                            }
+                                            &[href="/r/RedSox"]:before, &[href="/r/redsox"]:before {
+                                                background-position: 0 -48px;
+                                            }
+                                            &[href="/r/CHICubs"]:before, &[href="/r/ChiCubs"]:before, &[href="/r/chicubs"]:before, &[href="/r/Cubs"]:before, &[href="/r/cubs"]:before {
+                                                background-position: 0 -64px;
+                                            }
+                                            &[href="/r/WhiteSox"]:before, &[href="/r/whitesox"]:before {
+                                                background-position: 0 -80px;
+                                            }
+                                            &[href="/r/Reds"]:before, &[href="/r/reds"]:before {
+                                                background-position: 0 -96px;
+                                            }
+                                            &[href="/r/WahoosTipi"]:before, &[href="/r/wahoostipi"]:before {
+                                                background-position: 0 -112px;
+                                            }
+                                            &[href="/r/ColoradoRockies"]:before, &[href="/r/coloradorockies"]:before {
+                                                background-position: 0 -128px;
+                                            }
+                                            &[href="/r/MotorCityKitties"]:before, &[href="/r/motorcitykitties"]:before {
+                                                background-position: 0 -144px;
+                                            }
+                                            &[href="/r/Astros"]:before, &[href="/r/astros"]:before {
+                                                background-position: 0 -160px;
+                                            }
+                                            &[href="/r/KCRoyals"]:before, &[href="/r/kcroyals"]:before {
+                                                background-position: 0 -176px;
+                                            }
+                                            &[href="/r/AngelsBaseball"]:before, &[href="/r/angelsbaseball"]:before {
+                                                background-position: 0 -192px;
+                                            }
+                                            &[href="/r/Dodgers"]:before, &[href="/r/dodgers"]:before {
+                                                background-position: 0 -208px;
+                                            }
+                                            &[href="/r/LetsGoFish"]:before, &[href="/r/letsgofish"]:before {
+                                                background-position: 0 -224px;
+                                            }
+                                            &[href="/r/Brewers"]:before, &[href="/r/brewers"]:before {
+                                                background-position: 0 -240px;
+                                            }
+                                            &[href="/r/MinnesotaTwins"]:before, &[href="/r/minnesotatwins"]:before {
+                                                background-position: 0 -256px;
+                                            }
+                                            &[href="/r/NewYorkMets"]:before, &[href="/r/newyorkmets"]:before {
+                                                background-position: 0 -272px;
+                                            }
+                                            &[href="/r/NYYankees"]:before, &[href="/r/nyyankees"]:before {
+                                                background-position: 0 -288px;
+                                            }
+                                            &[href="/r/OaklandAthletics"]:before, &[href="/r/oaklandathletics"]:before {
+                                                background-position: 0 -304px;
+                                            }
+                                            &[href="/r/Phillies"]:before, &[href="/r/phillies"]:before {
+                                                background-position: 0 -320px;
+                                            }
+                                            &[href="/r/Buccos"]:before, &[href="/r/buccos"]:before {
+                                                background-position: 0 -336px;
+                                            }
+                                            &[href="/r/Padres"]:before, &[href="/r/padres"]:before {
+                                                background-position: 0 -352px;
+                                            }
+                                            &[href="/r/SFGiants"]:before, &[href="/r/sfgiants"]:before {
+                                                background-position: 0 -368px;
+                                            }
+                                            &[href="/r/Mariners"]:before, &[href="/r/mariners"]:before {
+                                                background-position: 0 -384px;
+                                            }
+                                            &[href="/r/Cardinals"]:before, &[href="/r/cardinals"]:before {
+                                                background-position: 0 -400px;
+                                            }
+                                            &[href="/r/TampaBayRays"]:before, &[href="/r/tampabayrays"]:before {
+                                                background-position: 0 -416px;
+                                            }
+                                            &[href="/r/TexasRangers"]:before, &[href="/r/texasrangers"]:before {
+                                                background-position: 0 -432px;
+                                            }
+                                            &[href="/r/TorontoBlueJays"]:before, &[href="/r/torontobluejays"]:before {
+                                                background-position: 0 -448px;
+                                            }
+                                            &[href="/r/Nationals"]:before, &[href="/r/nationals"]:before {
+                                                background-position: 0 -464px;
+                                            }
                                         }
                                     }
                                 }
@@ -677,10 +673,13 @@ body {
                                     left: 31px;
                                     tbody {
                                         font-size: 13px;
+                                    }
+                                    td {
                                         a {
                                             display: flex;
                                             &:before {
-                                                margin-right: 4px;
+                                                margin-left: -2px;
+                                                margin-right: 8px;
                                             }
                                         }
                                     }
@@ -711,6 +710,35 @@ body {
                                             align-items: center;
                                             sup {
                                                 align-self: flex-start;
+                                            }
+                                            a {
+                                                &[title*="Lost"]:after {
+                                                    content: "";
+                                                    top: 2px;
+                                                    right: 11px;
+                                                    position: absolute;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    height: 6px;
+                                                    width: 6px;
+                                                    border: 1px solid $fg-white;
+                                                    background-color: $bg-blue;
+                                                    border-radius: 6px;
+                                                }
+                                                &[title*="Won"]:after {
+                                                    content: "";
+                                                    top: 2px;
+                                                    right: 11px;
+                                                    position: absolute;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    height: 8px;
+                                                    width: 8px;
+                                                    background-color: $fg-white;
+                                                    border-radius: 4px;
+                                                }
                                             }
                                         }
                                         strong > sup {
